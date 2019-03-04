@@ -25,10 +25,10 @@ public class ProtocolSupport extends Plugin {
 
 	@Override
 	public void onEnable() {
-		if (Utils.getJavaPropertyValue("enablepe", false, Boolean::parseBoolean)) {
+		//if (Utils.getJavaPropertyValue("enablepe", false, Boolean::parseBoolean)) {
 			getLogger().log(Level.INFO, "Enabling MCPE support");
 			(peserver = new PEProxyServer()).start();
-		}
+		//}
 	}
 
 	@Override
