@@ -1,9 +1,14 @@
 # Build Folders #
 bin/
 build/
-libs/
 target/
 gen/
+<<<<<<< HEAD
+libraries_runtime/
+libraries_shade/
+build_libraries/
+logs/
+=======
 dllibs/
 out/
 
@@ -14,16 +19,24 @@ out/
 *.prefs
 /.apt_generated/
 *.factorypath
+>>>>>>> branch 'master' of https://github.com/ProtocolSupport/ProtocolSupportBungee
 
 # Gradle
 .gradle
 .gradletasknamecache
 
+ # Eclipse Files #
+*.project
+*.classpath
+*.prefs
+*.factorypath
+.apt_generated/
+.externalToolBuilders/
+
 # Netbeans
-/.nb-gradle/
+.nb-gradle/
 
 # IntelliJ
 .idea/
 *.iml
-/dllibsc/
-/dllibss/
+

@@ -2,7 +2,6 @@ package protocolsupport.protocol.packet.middleimpl.writeable.play.v_pe;
 
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.UUID;
 
 import io.netty.buffer.ByteBuf;
 import net.md_5.bungee.protocol.packet.Login;

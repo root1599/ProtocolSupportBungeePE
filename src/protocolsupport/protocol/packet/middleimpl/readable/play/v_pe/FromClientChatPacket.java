@@ -13,7 +13,6 @@ import net.md_5.bungee.protocol.packet.Chat;
 import protocolsupport.protocol.packet.id.PEPacketId;
 import protocolsupport.protocol.packet.middleimpl.readable.PEDefinedReadableMiddlePacket;
 import protocolsupport.protocol.serializer.StringSerializer;
-import protocolsupport.protocol.serializer.VarNumberSerializer;
 
 public class FromClientChatPacket extends PEDefinedReadableMiddlePacket {
 
