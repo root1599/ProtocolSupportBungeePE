@@ -1,10 +1,10 @@
 package protocolsupport.protocol.serializer;
 
-import io.netty.buffer.ByteBuf;
-import protocolsupport.utils.Utils;
-
 import java.util.function.Consumer;
 import java.util.function.ObjIntConsumer;
+
+import io.netty.buffer.ByteBuf;
+import protocolsupport.utils.Utils;
 
 public class ArraySerializer {
 

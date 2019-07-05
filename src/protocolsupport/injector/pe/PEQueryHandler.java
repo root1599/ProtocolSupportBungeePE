@@ -1,5 +1,8 @@
 package protocolsupport.injector.pe;
 
+import java.net.InetSocketAddress;
+import java.util.concurrent.TimeUnit;
+
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelHandlerContext;
@@ -7,9 +10,6 @@ import io.netty.channel.socket.DatagramPacket;
 import io.netty.handler.codec.MessageToByteEncoder;
 import net.md_5.bungee.BungeeCord;
 import net.md_5.bungee.query.QueryHandler;
-
-import java.net.InetSocketAddress;
-import java.util.concurrent.TimeUnit;
 
 public class PEQueryHandler extends QueryHandler {
 
@@ -40,7 +40,7 @@ public class PEQueryHandler extends QueryHandler {
             final ByteBuf buf = (ByteBuf)msg;
             final ByteBuf peakBuf = buf.duplicate();
             hasChecked = true; //we check the first packet only
-            if (peakBuf.readUnsignedByte() != 0xFE || peakBuf.readUnsignedByte() != 0xFD) {
+            if ((peakBuf.readUnsignedByte() != 0xFE) || (peakBuf.readUnsignedByte() != 0xFD)) {
                 ctx.fireChannelRead(msg);
                 return;
             }

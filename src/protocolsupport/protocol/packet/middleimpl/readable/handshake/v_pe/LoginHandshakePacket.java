@@ -109,7 +109,7 @@ public class LoginHandshakePacket extends PEDefinedReadableMiddlePacket {
 				JsonObject jsonobject = Utils.GSON.fromJson(jwsobject.getPayload().toString(), JsonObject.class);
 				key = parseKey(JsonUtils.getString(jsonobject, "identityPublicKey"));
 				if (jsonobject.has("extraData")) {
-					return new Any<Key, JsonObject>(signatureValid ? key : null, JsonUtils.getJsonObject(jsonobject, "extraData"));
+					return new Any<>(signatureValid ? key : null, JsonUtils.getJsonObject(jsonobject, "extraData"));
 				}
 			}
 		} catch (InvalidKeySpecException | JOSEException e) {

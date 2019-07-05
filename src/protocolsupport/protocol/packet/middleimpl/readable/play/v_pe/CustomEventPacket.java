@@ -1,5 +1,8 @@
 package protocolsupport.protocol.packet.middleimpl.readable.play.v_pe;
 
+import java.util.Arrays;
+import java.util.Collection;
+
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import net.md_5.bungee.protocol.PacketWrapper;
@@ -8,9 +11,6 @@ import protocolsupport.protocol.packet.id.PEPacketId;
 import protocolsupport.protocol.packet.middleimpl.readable.PEDefinedReadableMiddlePacket;
 import protocolsupport.protocol.serializer.MiscSerializer;
 import protocolsupport.protocol.serializer.StringSerializer;
-
-import java.util.Arrays;
-import java.util.Collection;
 
 public class CustomEventPacket extends PEDefinedReadableMiddlePacket {
     public CustomEventPacket() {
